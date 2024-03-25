@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js" integrity="sha512-NLtnLBS9Q2w7GKK9rKxdtgL7rA7CAS85uC/0xd9im4J/yOL4F9ZVlv634NAM7run8hz3wI2GabaA6vv8vJtHiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/script.js"></script>
+
+    <script>
+        var myAnimation = new hoverEffect({
+            parent: document.querySelector('.my-div'),
+            intensity: 0.3,
+            image1: 'images/myImage1.jpg',
+            image2: 'images/myImage2.jpg',
+            displacementImage: 'images/myDistorsionImage.png'
+        });
+
+        let cursor = {
+            x:0 , 
+            y: 0
+        }
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.x = -e.clientX * .1;
+            cursor.y = -e.clientY * .1;
+
+            img.style.transform = 'translate(${cursor.x}px, ${cursor.y}px)';
+        })
+    </script>
+</body>
+</html>
